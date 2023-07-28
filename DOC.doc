@@ -1,0 +1,74 @@
+# StakingPool Contract Readme
+
+The StakingPool is a Solidity smart contract that allows users to stake an ERC-20 token and receive rewards periodically. The contract is designed to provide a simple staking mechanism with a predefined reward amount and interval.
+
+## Features
+
+- Users can stake their ERC-20 tokens into the StakingPool contract.
+- Users will receive rewards periodically based on the predefined reward amount and interval.
+- The staking period lasts for 30 days.
+- After unstaking, there is a lock period of 2 hours before users can withdraw their staked tokens.
+- The contract owner can initialize the contract with a specified staking token, reward amount, and reward interval.
+- The contract owner can mint reward tokens and distribute them to the stakers.
+
+## Contract Details
+
+### Smart Contracts
+
+- `StakingPool.sol`: The main contract that handles staking, reward distribution, and withdrawals.
+
+### Interfaces
+
+- `IERC20.sol`: An ERC-20 token interface, providing functions for transferring tokens and checking balances.
+
+## Usage
+
+### Prerequisites
+
+- Solidity Compiler 0.8.0 or compatible versions.
+
+### Deployment
+
+1. Deploy the `StakingPool.sol` contract to your preferred Ethereum development network (e.g., Remix, Hardhat, Truffle, etc.).
+
+### Contract Initialization
+
+1. Deploy the `StakingPool.sol` contract with the following parameters:
+
+   - `_stakingToken`: The address of the ERC-20 token that users can stake.
+   - `_rewardAmount`: The total amount of reward tokens to be distributed per reward interval.
+   - `_rewardInterval`: The time interval (in seconds) between reward distributions.
+
+2. After deploying the contract, the contract owner can use the `updateReward` function to distribute rewards to stakers.
+
+### Staking
+
+1. Users can stake their ERC-20 tokens by calling the `stake(uint256 amount)` function, where `amount` is the number of tokens they want to stake.
+
+### Reward Distribution
+
+1. The contract owner can distribute rewards to stakers by calling the `updateReward(address account)` function.
+
+### Unstaking and Withdrawal
+
+1. Users can withdraw their staked tokens by calling the `withdraw(uint256 amount)` function, where `amount` is the number of tokens they want to withdraw.
+
+2. After unstaking, there is a lock period of 2 hours before users can withdraw their staked tokens.
+
+### Helper Functions
+
+1. To check the balance of staked tokens for a specific account, users can call the `getStakedBalance(address account)` function.
+
+## Security Considerations
+
+- Make sure to test the contract thoroughly before deploying it on the mainnet or any production environment.
+- Ensure that the deployed contract has sufficient funds to cover the reward distribution.
+- The contract owner has the ability to distribute rewards, so ensure that only trusted entities have access to the owner's account.
+
+## License
+
+This smart contract is licensed under the MIT License. See the `LICENSE` file for more information.
+
+---
+
+Note: The above information provides a brief overview of the StakingPool contract and its functionality. It is essential to perform a detailed review of the code and consider security audits before deploying it in a production environment.
