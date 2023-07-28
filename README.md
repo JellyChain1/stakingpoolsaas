@@ -48,7 +48,7 @@ StakingPool SaaS is an open-source project and is licensed under the MIT License
 
 ## Support
 
-If you encounter any issues, have questions, or need assistance with StakingPool SaaS, feel free to reach out to our dedicated support team at support@stakingpoolsaas.com.
+If you encounter any issues, have questions, or need assistance with StakingPool SaaS, feel free to reach out to our dedicated support team at Jellychain1@gmail.com.
 
 ---
 
