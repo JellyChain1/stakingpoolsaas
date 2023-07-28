@@ -1,4 +1,4 @@
-# StakingPool Contract Readme
+# StakingPool Contract Documentation
 
 The StakingPool is a Solidity smart contract that allows users to stake an ERC-20 token and receive rewards periodically. The contract is designed to provide a simple staking mechanism with a predefined reward amount and interval.
 
